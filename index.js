@@ -87,9 +87,14 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+// console log title
+
+console.log("Financial Analysis")
+console.log("----------------")
+
 // works out total length of array
 
-console.log("total months:" + finances.length);
+console.log("Total Months:" + finances.length);
 
 // works out the sum of profits/losses
 
@@ -98,19 +103,23 @@ for (let i = 0; i < finances.length; i++){
     sum += finances[i][1];
 }
 
-console.log(sum);
+// displays to the console the total number of sales
+
+console.log("Total: $" + sum);
 
 // works out average change in profits and losses
 
 let avg = 0
 
 for (let i=0 ; i < finances.length - 1; i++){
-    avg= avg + finances[i][1]- finances[i+1][1]
+    avg= avg + finances[i+1][1]- finances[i][1]
 }
-console.log(avg/(finances.length - 1));
         
-var realavg = avg/(finances.length - 1);
-console.log(realavg.toFixed(2))
+var average = avg/(finances.length - 1);
+
+// displays to the console average change to 2 decimal points
+
+console.log("Average Change:", average.toFixed(2) , "this includes the first month!")
 
 // works out greatest increase and decrease in profits
 
@@ -119,6 +128,8 @@ var greatestincrease = 0
 var greatestdecrease = 0
 
 var profitchange= 0
+
+// works out greatest increase of profits
 
 for (let i=0 ; i < finances.length - 1; i++){
     profitchange=finances[i+1][1]- finances[i][1]
@@ -129,8 +140,12 @@ for (let i=0 ; i < finances.length - 1; i++){
     }
 }
 
-console.log(greatestincrease)
-console.log(month)
+// displays the greatest increase and the month to the console
+
+console.log("Greatest Increase:", month, ": $",greatestincrease ,"(current month - previous month)")
+
+
+// works out greatest decrease in profits
 
 for (let i=0 ; i < finances.length - 1; i++){
     profitchange=finances[i+1][1]- finances[i][1]
@@ -141,8 +156,10 @@ for (let i=0 ; i < finances.length - 1; i++){
     }
 }
 
-console.log(greatestdecrease)
-console.log(month)
+// displays greatest decrease to the console
+
+console.log("Greatest Decrease:", month, ": $",greatestdecrease,"(current month - previous month)")
+
 
 
 
