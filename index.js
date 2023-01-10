@@ -91,7 +91,7 @@ console.log("total months:" + finances.length);
 
 let sum = 0;
 for (let i = 0; i < finances.length; i++){
-    sum += finances[i];
+    sum += finances[i][1];
 }
 
 console.log(sum)
