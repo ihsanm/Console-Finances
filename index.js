@@ -87,11 +87,42 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+// works out total length of array
+
 console.log("total months:" + finances.length);
+
+// works out the sum of profits/losses
 
 let sum = 0;
 for (let i = 0; i < finances.length; i++){
     sum += finances[i][1];
 }
 
-console.log(sum)
+console.log(sum);
+
+// works out average change in profits and losses
+
+let avg = 0
+
+for (let i=0 ; i < finances.length - 1; i++){
+    avg= avg + finances[i][1]- finances[i+1][1]
+}
+console.log(avg/(finances.length - 1));
+        
+var realavg = avg/(finances.length - 1);
+console.log(realavg.toFixed(2))
+
+// works out greatest increase and decrease in profits
+
+
+
+
+
+
+
+
+
+
+
+
+
