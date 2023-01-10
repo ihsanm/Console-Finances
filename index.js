@@ -114,11 +114,35 @@ console.log(realavg.toFixed(2))
 
 // works out greatest increase and decrease in profits
 
+var greatestincrease = 0
 
+var greatestdecrease = 0
 
+var profitchange= 0
 
+for (let i=0 ; i < finances.length - 1; i++){
+    profitchange=finances[i+1][1]- finances[i][1]
 
+    if (profitchange > greatestincrease){
+        greatestincrease= profitchange;
+        month= finances[i+1][0];
+    }
+}
 
+console.log(greatestincrease)
+console.log(month)
+
+for (let i=0 ; i < finances.length - 1; i++){
+    profitchange=finances[i+1][1]- finances[i][1]
+
+    if (profitchange < greatestdecrease){
+        greatestdecrease= profitchange;
+        month= finances[i+1][0];
+    }
+}
+
+console.log(greatestdecrease)
+console.log(month)
 
 
 
