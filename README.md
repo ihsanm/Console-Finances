@@ -4,7 +4,8 @@
 
 The purpose of this project was to create a console app which give various information about the array, total number of months, total profit, average profit and losses over the period of time and the greatest increase and decrease in profits and losses and showing their corresponding months in which they occur
 
-https://gyazo.com/a83aa2b6abf9b5e678101598f8c3b546
+<img src="https://gyazo.com/a83aa2b6abf9b5e678101598f8c3b546">
+
 
 ## Installation
 
